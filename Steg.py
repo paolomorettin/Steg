@@ -182,10 +182,3 @@ def bin2ascii(s) :
 	if len(s) > 0 : print "<Steg> Warning: bad sized input string"
 	return out
 	
-def test() :
-	f = open("Steg.py")
-	code = f.read()
-	f.close()
-
-	write_image("me.jpg", encode(ascii2bin(code)),out_path="code")
-	return	bin2ascii(decode(read_image("code.png")))
